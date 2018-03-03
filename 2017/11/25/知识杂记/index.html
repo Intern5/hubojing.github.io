@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="胡博靖" />
+
+
+
+<meta name="description" content="每个月的流量大多贡献给查资料了，学习果然是件烧钱的事情啊（正经脸）">
+<meta name="keywords" content="C++,MFC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知识杂记">
+<meta property="og:url" content="http://hubojing.github.io/2017/11/25/知识杂记/index.html">
+<meta property="og:site_name" content="胡博靖的技术博客">
+<meta property="og:description" content="每个月的流量大多贡献给查资料了，学习果然是件烧钱的事情啊（正经脸）">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507832615047&di=310b98ca6b643d5d1e0ffb85d8247dcd&imgtype=0&src=http%3A%2F%2Fwww.5itjob.com%2Fuploads%2Fallimg%2F161129%2F1-1611291414392E.png">
+<meta property="og:updated_time" content="2017-12-07T15:22:32.303Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="知识杂记">
+<meta name="twitter:description" content="每个月的流量大多贡献给查资料了，学习果然是件烧钱的事情啊（正经脸）">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507832615047&di=310b98ca6b643d5d1e0ffb85d8247dcd&imgtype=0&src=http%3A%2F%2Fwww.5itjob.com%2Fuploads%2Fallimg%2F161129%2F1-1611291414392E.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="胡博靖的技术博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/green/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>知识杂记 | 胡博靖的技术博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: false,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+<link rel="stylesheet" href="http://disqus.hubojing.me/iDisqus.min.css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1498247776150&amp;di=a1fdc0869f65da377118893dfe708f5e&amp;imgtype=0&amp;src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201508%2F24%2F20150824132210_HjBJC.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">胡博靖</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">小清新IT旅程|为中华崛起读书</p>
+        <p class="post-count">已写133.1k字</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/categories/互联网">互联网</a></li>
+                        
+                            <li><a href="/categories/通信工程">通信工程</a></li>
+                        
+                            <li><a href="/littletalk/">微言</a></li>
+                        
+                            <li><a href="/about/">关于</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:hubojing@outlook.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/hubojing" title="GitHub"></a>
+                            
+                                <a class="fa CSDN" href="http://blog.csdn.net/hubojing/" title="CSDN"></a>
+                            
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=92203594" title="网易云音乐"></a>
+                            
+                                <a class="fa Quora" href="https://www.quora.com/profile/Bojing-Hu/" title="Quora"></a>
+                            
+                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=417797456&site=qq&menu=yes" title="QQ"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/1602/">1602</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D/">3D</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BCG/">BCG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DigitalOcean/">DigitalOcean</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/">Github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HOOPS-3D/">HOOPS 3D</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ListControl/">ListControl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MFC/">MFC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MFC-多线程/">MFC 多线程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PPT动画/">PPT动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TreeControl/">TreeControl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eclipse/">eclipse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ffmpeg/">ffmpeg</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab/">matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/photoshop/">photoshop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/socket/">socket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/主题/">主题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/优化/">优化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/公告/">公告</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数/">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/创意/">创意</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单片机/">单片机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/域名/">域名</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多说/">多说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/奇淫技巧/">奇淫技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/密码锁/">密码锁</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/嵌入式系统/">嵌入式系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/思维/">思维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/手机/">手机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/拆机/">拆机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/教程/">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数字信号处理/">数字信号处理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数码/">数码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/显示技术/">显示技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树/">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/爬虫/">爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/病毒/">病毒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/矩阵键盘/">矩阵键盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/硬件/">硬件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/竞赛/">竞赛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线代/">线代</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装机/">装机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/评测/">评测</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/说明/">说明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/路由器/">路由器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/问题/">问题</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.iiwo.vip/">小忆</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.iwangyu.cn/">WangYu</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://ursb.me/">Airing</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://txiner.top/">Hundred</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.ersaijun.cn/">二赛君</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.yeqianfeng.me/">太阳尚远</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.qiujinfeng.com/">邱锦锋</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.waydrow.com/">Waydrow</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://qqdie.com/">Jrotty</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.just666.cn/">Shawn</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://theask.cn/">该问</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.sfantree.com/">水番林</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://rm-rf.moe/">梦的小窝</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.61mon.com/">刘毅</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.pokerboy.cn/">柚子鬼</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://zcheng.ren/">ZeeCoder</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.zcmol.cn/">早茶月光</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://rebootcat.com/">Linux之路</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://townwang.com/">王振镇</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://shawnzeng.com/">Shawnzeng</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.52itstyle.com/">小柒博客</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://frankchen.xyz/">不正经数据科学家</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://nolongerwait.com/">秦简</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://xiaowiba.com/">小尾巴</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://sopuy.com/">sopuy</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://itruke.com/">技术宅男子</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.5ih5.com.cn/">镜花水月</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://blog.isecret.vip/">Secret</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://www.pwyqspace.com/">PWYQ Space</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.mapan.win/">马攀</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://darrenliuwei.com/">刘伟</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://w4ctech.cn/">w4ctech</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">写代码的小清新，目标是成为学有建树的工程师。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">胡博靖</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1498247776150&amp;di=a1fdc0869f65da377118893dfe708f5e&amp;imgtype=0&amp;src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201508%2F24%2F20150824132210_HjBJC.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">胡博靖</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">小清新IT旅程|为中华崛起读书</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/互联网">互联网</a></li>
+                
+                    <li><a href="/categories/通信工程">通信工程</a></li>
+                
+                    <li><a href="/littletalk/">微言</a></li>
+                
+                    <li><a href="/about/">关于</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:hubojing@outlook.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/hubojing" title="GitHub"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="http://blog.csdn.net/hubojing/" title="CSDN"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=92203594" title="网易云音乐"></a>
+                            
+                                <a class="fa Quora" target="_blank" href="https://www.quora.com/profile/Bojing-Hu/" title="Quora"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=417797456&site=qq&menu=yes" title="QQ"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-知识杂记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/25/知识杂记/" class="article-date">
+      <time datetime="2017-11-25T13:49:36.000Z" itemprop="datePublished">2017-11-25</time>
+</a>
+
+ 
+    <a href="/2017/11/25/知识杂记/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+        
+            <span class="disqus-comment-count" data-disqus-identifier="2017/11/25/知识杂记/"></span>
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      知识杂记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/互联网/">互联网</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MFC/">MFC</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507832615047&di=310b98ca6b643d5d1e0ffb85d8247dcd&imgtype=0&src=http%3A%2F%2Fwww.5itjob.com%2Fuploads%2Fallimg%2F161129%2F1-1611291414392E.png" width="300" height="180" style="float:right;"><br><br><br>　　<strong>每个月的流量大多贡献给查资料了，学习果然是件烧钱的事情啊（正经脸）</strong><br><br><br> </div>
+
+<a id="more"></a>
+<p>清空手机谷歌浏览器缓存的二十几个网页，也做一个简单的知识回顾。</p>
+<h1><span id="使用cimage加载png的一般方法">使用CImage加载PNG的一般方法</span></h1><ol>
+<li>打开stdafx.h添加<code>#include&lt;atlimage.h&gt;</code>；</li>
+<li>定义一个CImage类对象，调用CImage::Load方法装载一个外部图像文件；</li>
+<li>调用CImage::Draw方法绘制图像。</li>
+</ol>
+<p>eg.(待测试)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CRect rc;</span><br><span class="line">m_picCtrl.GetClientRect(&amp;rc);</span><br><span class="line">SetWindowPos(this, 0, 0, 320, 80, SWP_SHOWWINDOW);</span><br><span class="line">CString strTemp;</span><br><span class="line">strTemp.Format(_T(&quot;%d%d&quot;), rc.right, rc.bottom);</span><br><span class="line">CImage image;</span><br><span class="line">image.Load(_T(&quot;D:\\1.png&quot;));</span><br><span class="line">CDC* pDc = m_picCtrl.GetWindowDC();//获取设备句柄</span><br><span class="line">image.Draw(pDc-&gt;m_hDC, rc);</span><br><span class="line">UpdateWindow();</span><br></pre></td></tr></table></figure></p>
+<h1><span id="mfc-tab控件">MFC tab控件</span></h1><ol>
+<li>创建一个对话框，放tab控件，将控件添加变量m_tabCtrl</li>
+<li>再创建两个对话框，修改属性Border:none，Style:Child</li>
+<li><p>在tabDlg中添加两个对话框类变量</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CDialog1 m_dlg1;</span><br><span class="line">CDialog2 m_dlg2;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在tabDlg的OnInitDialog()函数中添加：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">CRect rect;</span><br><span class="line">m_tabCtrl.GetClientRect(&amp;rect);</span><br><span class="line">rect.top+=<span class="number">20</span>;</span><br><span class="line">rect.bottom-=<span class="number">1</span>;</span><br><span class="line">rect.left+<span class="number">1</span>=<span class="number">1</span>;</span><br><span class="line">rect.right-=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">m_tabCtrl.InsertItem(<span class="number">0</span>,<span class="string">"第一页"</span>);</span><br><span class="line">m_tabCtrl.InsertItem(<span class="number">1</span>,<span class="string">"第二页"</span>);</span><br><span class="line"></span><br><span class="line">m_dlg1.Create(IDD_DIALOG1,&amp;m_tabCtrl);<span class="comment">//或者Create(IDD_DIALOG1,GetDlgItem(IDC_TAB));</span></span><br><span class="line">m_dlg2.Create(IDD_DIALOG2,&amp;m_tabCtrl);</span><br><span class="line"></span><br><span class="line">m_dlg1.ShowWindow(&amp;rect);</span><br><span class="line">m_dlg2.ShowWindow(&amp;rect);</span><br><span class="line"></span><br><span class="line">m_dlg1.ShowWindow(<span class="literal">true</span>);</span><br><span class="line">m_dlg2.ShowWindow(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在tabDlg中添加TCN_SELECHANGE消息</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> CtabDlg::OnTcnSelchangeTab1(NMHDR *PNMHDR, LRSULT *pResult)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">switch</span>(m_tabCtrl.GetCurSel())</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">	m_dlg1.ShowWindow(<span class="literal">true</span>);</span><br><span class="line">	m_dlg2.SWP_SHOWWINDOW(<span class="literal">false</span>);</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	case1:</span><br><span class="line">	m_dlg1.ShowWindow(<span class="literal">false</span>);</span><br><span class="line">	m_dlg2.ShowWindow(<span class="literal">true</span>);</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	*pResult = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1><span id="安全函数">安全函数</span></h1><p>strtok_s<br>wcstok_s</p>
+<h1><span id="在mfc对话框中显示html网页">在MFC对话框中显示html网页</span></h1><p>创建对话框时勾选html对话框，添加控件变量m_html;<br>然后在OnInitDialog()中添加<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m_html.Navigate(<span class="string">"www.baidu.com"</span>);</span><br></pre></td></tr></table></figure></p>
+<h1><span id="cximage的使用">CXImage的使用</span></h1><p>另成一篇。</p>
+<h1><span id="限制只启动一个exe">限制只启动一个exe</span></h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(FindWindow(<span class="literal">NULL</span>,<span class="string">"caption"</span>)！= <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">	MessageBox(<span class="string">"程序已运行！"</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1><span id="pcejs">PCE.js</span></h1><p><a href="https://jamesfriend.com.au/pce-js/mobile/" target="_blank" rel="noopener">https://jamesfriend.com.au/pce-js/mobile/</a></p>
+<h1><span id="mfc复选框">MFC复选框</span></h1><p>法一：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CButton* pBtn=(CButton*)GetDlgItem(IDC_CHECK1);</span><br><span class="line"><span class="keyword">int</span> state = pBtn-&gt;GetCheck();</span><br></pre></td></tr></table></figure></p>
+<p>state==0 复选框没有被选中<br>state==1 复选框被选中<br>state==2 不确定（只有button有BS_3STATE或BS_AUTO3STATE style时才可用）<br>设置状态：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CButton* pBtn=(CButton*)GetDlgItem(IDC_CHECK1);</span><br><span class="line"><span class="keyword">int</span> state = pBtn-&gt;GetCheck(<span class="number">1</span>);</span><br></pre></td></tr></table></figure></p>
+<p>法二：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(BST_CHECKED == IsDlgButtonChecked(IDC_CHECK1))</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//对应操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>使用BS_AUTOCHECKBOX、BS_AUTORADIOBUTTON、BS_AUTO3STATE、BS_CHECKBOX、BS_RADIOBUTTON或BS_3STATE样式创建的按钮的返回值可以是如下值之一：<br>BST_CHECKED  按钮被选中<br>BST_UNCHECKED 按钮未被选中<br>BST_INDETERMINATE 不确定，按钮灰显（只有button有BS_3STATE或BS_AUTO3STATE style时才可用）</p>
+<p>法三：<br>为控件添加BOOL变量m_delete;<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> CTestDlg::DoDataExchange(CDataExchange *pDX)</span><br><span class="line">&#123;</span><br><span class="line">	CTestDlg::DoDataExchange(pDX);</span><br><span class="line">	DDX_Check(pDX,IDC_CHECK1,m_delete);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1><span id="关于不允许指针指向不完整的类类型问题分析">关于“不允许指针指向不完整的类类型”问题分析</span></h1><p>神贴必看，自从看过后，再也没犯过这个错，我不会说脑海里都是作者满满的嘲讽笑声的<br><a href="http://m.blog.csdn.net/luna84/article/details/50380186" target="_blank" rel="noopener">http://m.blog.csdn.net/luna84/article/details/50380186</a></p>
+<h1><span id="树节点遍历">树节点遍历</span></h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Traverse(m_tree, hChild)</span><br><span class="line">&#123;</span><br><span class="line">	HTREEITEM hChild = m_tree.GetChildren(hItem);</span><br><span class="line">	<span class="keyword">while</span>(hChild)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">bool</span> temp=Traverse(m_tree,hChild);</span><br><span class="line">		<span class="keyword">if</span>(temp==<span class="literal">true</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		hChild=m_tree.GetNextSiblingItem(hChild);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1><span id="遍历vector的几种方法">遍历Vector的几种方法</span></h1><p>C++11<br>法一：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">size_t</span> i=<span class="number">0</span>;i&lt;vec.size();++i)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span>	iTemp = vec[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>法二：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it = vec.begin();it!=vec.end();++it)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> iTemp = *it;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>法三：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i:vec)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> iTemp = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>法四：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for_each(vec.begin(),vec.end(),[](<span class="keyword">int</span> i)&#123;</span><br><span class="line"><span class="keyword">int</span> iTemp = i;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h1><span id="表达式的副作用">表达式的副作用</span></h1><p><a href="http://www.cnblogs.com/shiguangshuo/p/5236962.html" target="_blank" rel="noopener">http://www.cnblogs.com/shiguangshuo/p/5236962.html</a></p>
+<h1><span id="理解递归">理解递归</span></h1><p>另成一篇。</p>
+<h1><span id="屏蔽回车和ese">屏蔽回车和ESE</span></h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">BOOL CTestDlg::PreTranslateMessage(MSG* pMsg)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(pMsg-&gt;message==WM_KEYDOWN)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(pMsg-&gt;wParam==VK_RETURN||pMsg-&gt;wParam==VK_ESCAPE)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> CDialogEx::PreTranslateMessage(pMsg);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1><span id="mfc查找特定后缀文件">MFC查找特定后缀文件</span></h1><p>法一：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">CFileFind findfile;</span><br><span class="line">CString strPath;</span><br><span class="line">CString strName;</span><br><span class="line">CString strFilePath;</span><br><span class="line">BOOL bRet=findfile.FindFile(strPath+_T(<span class="string">"*.txt"</span>));<span class="comment">//以.txt为例</span></span><br><span class="line"><span class="keyword">if</span>(!bRet)</span><br><span class="line">&#123;</span><br><span class="line">MessageBox(_T(<span class="string">"无此文件！"</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span>(bRet)</span><br><span class="line">&#123;</span><br><span class="line">bRet=findfile.FindNextFile();</span><br><span class="line">strName=findfile.GetFileTitle();</span><br><span class="line">strFilePath=findfile.GetFilePath();</span><br><span class="line"><span class="keyword">if</span>(<span class="comment">//操作)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//所需操作;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>法二：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;CString&gt; fileList;</span><br><span class="line">WIN32_FIND_DATA wfd;</span><br><span class="line">CString sPath=_T(<span class="string">"*.txt"</span>);</span><br><span class="line">HANDLE hFile=FindFirstFile(sPath.GetBuffer(),&amp;wfd);</span><br><span class="line"><span class="keyword">if</span>(INVALID_HANDLE_VALUE==hFile)</span><br><span class="line">&#123;</span><br><span class="line">TRACE(_T(<span class="string">"不合法！\n"</span>));</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;<span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">fileList.push_back(wfd.cFileName);</span><br><span class="line">TRACE(<span class="string">"%s\n"</span>,wfd.cFileName);</span><br><span class="line">&#125;<span class="keyword">while</span>(FindNextFile(hFile,&amp;wfd));</span><br></pre></td></tr></table></figure></p>
+<p>使用WIN32_FIND_DATA好像存在内存释放的问题。</p>
+<h1><span id="为cdhtmldialog添加滚动条">为CDHtmlDialog添加滚动条</span></h1><p>初始化中添加以下代码即可。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SetHostFlags(DOCHOSTUIFLAG_NO3DBORDER|DOCHOSTUIFLAG_DIALOG);</span><br></pre></td></tr></table></figure></p>
+<p>Notepad++ 没有自动补全敲代码好累…</p>
+
+      
+    </div>
+    
+	
+
+
+  
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/11/25/知识杂记/">知识杂记</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">胡博靖</a></p>
+        <p><span class="post-count">本文字数:</span>1,052字</p>
+        <p><span>发布时间:</span>2017-11-25, 21:49:36</p>
+        <p><span>最后更新:</span>2017-12-07, 23:22:32</p>
+        
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/11/25/知识杂记/" title="知识杂记">http://hubojing.github.io/2017/11/25/知识杂记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://hubojing.github.io/2017/11/25/知识杂记/　　作者: 胡博靖" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/12/31/神转折2017/">
+                    神转折2017
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/11/21/PC评测/">
+                    PC评测
+                </a>
+            </div>
+        
+    </nav>
+
+  
+  
+  
+  
+  
+  
+  
+	<! -- 添加捐赠图标 -->
+<div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+           &uarr;<br>
+		   装成好像很多人打赏的样子 (￣▽￣)&quot;
+        </span>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- 支付宝打赏图案 -->
+		<img src="/img/alipay.jpg" alt="支付宝打赏"> 
+		<!-- 微信打赏图案 -->
+		<img src="/img/wechat.jpg" alt="微信打赏">  
+    </div>
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			$('#donate_board').addClass('hidden');
+			$('#donate_guide').removeClass('hidden');
+		}
+	</script>
+</div>
+<! -- 添加捐赠图标 -->
+
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">使用CImage加载PNG的一般方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">MFC tab控件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">安全函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">在MFC对话框中显示html网页</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">CXImage的使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">限制只启动一个exe</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">7.</span> <span class="toc-text">PCE.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">8.</span> <span class="toc-text">MFC复选框</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">9.</span> <span class="toc-text">关于“不允许指针指向不完整的类类型”问题分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">10.</span> <span class="toc-text">树节点遍历</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">11.</span> <span class="toc-text">遍历Vector的几种方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">12.</span> <span class="toc-text">表达式的副作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">13.</span> <span class="toc-text">理解递归</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">14.</span> <span class="toc-text">屏蔽回车和ESE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">15.</span> <span class="toc-text">MFC查找特定后缀文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">16.</span> <span class="toc-text">为CDHtmlDialog添加滚动条</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-6 i,
+        .toc-level-6 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"true"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"知识杂记　| 胡博靖的技术博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+	
+	
+	
+        <section id="comments">
+    <div id="comment"></div>
+    <script src="http://disqus.hubojing.me/iDisqus.min.js"></script>
+    <script>
+    var disq = new iDisqus('comment', {
+        forum: 'hubojing',
+        site: 'http://hubojing.me',
+        api: 'http://disqus.hubojing.me',
+        mode: 1,
+        timeout: 3000,
+        slug: location.pathname.slice(1).split('.')[0],
+        init: true,
+    });
+    </script>
+</section>
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/12/31/神转折2017/" title="上一篇: 神转折2017">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/11/21/PC评测/" title="下一篇: PC评测">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/03/BCG网格控件增删移动/">BCG网格控件增删移动</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/23/AndroidStudio配置JDK/">Android Studio配置JDK</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/22/递归中的return/">递归中的return</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/22/ffmpeg开发环境搭建/">ffmpeg开发环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/20/联想Y400拆机/">联想Y400拆机</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/19/公告/">公告</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/28/OpenCV3-4-0编译/">OpenCV3.4.0编译</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/06/微信自动跳一跳/">微信自动跳一跳</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/31/神转折2017/">神转折2017</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/知识杂记/">知识杂记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/PC评测/">PC评测</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/19/hexo多机同步/">hexo多机同步</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/14/栈/">栈</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/12/windows软件使用小技巧/">windows软件使用小技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/12/队列/">队列</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/24/WatchYourPC/">WatchYourPC</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/12/封装exe以及资源更新/">C++封装exe以及资源更新</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/08/hexo搭建再记录/">hexo搭建再记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/17/组装PC/">组装PC</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/12/网件R7000评测/">网件R7000评测</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/03/魅蓝Note6评测/">魅蓝Note6评测</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/31/三维坐标旋转/">三维坐标旋转</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/29/三维坐标系变换/">三维坐标系变换</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/10/古风自动造句器/">古风自动造句器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/23/树/">树</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/20/树状控件与列表控件交互以及XML的解析/">树状控件与列表控件交互以及XML的解析</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/18/求购/">≧∇≦</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/13/一个MFC利用MSXML解析XML的最简例子/">一个MFC利用MSXML解析XML的最简例子</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/29/勒索病毒/">新闻杂谈</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/25/HOOPS记录/">HOOPS记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/15/MFC-多线程-进度条-复制文件（夹）/">MFC+多线程+进度条+复制文件（夹）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/14/MFC网页分析程序/">MFC网页分析程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/07/Socket点对点聊天-文件传输/">Socket点对点聊天+文件传输</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/05/ContentProvider记录/">四大组件之ContentProvider记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/01/Service记录/">四大组件之Service记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/23/MFC绘制时钟/">MFC绘制时钟</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/折腾才是人生/">折腾才是人生</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/13/MFC傻瓜式教程/">MFC傻瓜式教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/05/多说关闭引发的麻烦/">多说关闭引发的麻烦</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/28/DigitalOcean购买服务器教程/">DigitalOcean购买服务器教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/26/更换为.me域名教程/">更换为.me域名教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/Github教育礼包/">Github教育礼包</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/制作简易计算器APP（线性结构）/">简易计算器（Android）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/模拟借书系统（java异常机制实现）/">模拟借书系统（Java异常机制实现）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/18/达达租车系统（Java实现）/">达达租车系统（Java实现）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/06/反省/">别做井底之蛙</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/虚拟实验平台/">虚拟实验平台比赛项目记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/03/hueman主题更换/">yelee --> hueman主题更换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/26/linux整理笔记/">一天一点linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/26/回归/">回归</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/27/上海决赛之旅/">上海决赛之旅 | the trip for contest in Shanghai</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/16/说明/">说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/29/P图集/">P图集 | PS picture album</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/14/Linux菜鸟初尝鲜/">Linux菜鸟初尝鲜 | First try on Linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/将hexo-github博客同步托管至coding/">将hexo+github博客同步托管至coding</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/22/PPT动画制作之自定义动画/">PPT动画制作之自定义动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/显示技术蹭课笔记/">显示技术蹭课笔记 | Display Techique Learning Note</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/java自学笔记/">java自学笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/12/靖靖的脑洞大开（一）/">靖靖的脑洞大开 | Jinger's Special Ideas</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/08/PPT动画制作之登录等待/">PPT动画制作之登录等待</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/08/markdown语法简记/">markdown语法简记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/1602-24C08-4X4键盘密码锁/">1602+24C08+4X4键盘密码锁</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/04/零碎知识记录/">零碎知识记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/06/Flash动画制作学习心得/">Flash动画制作学习心得</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/17/STC89C52RC单片机学习记录/">STC89C52RC单片机学习记录（1602篇）</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/10/matlab函数杂谈/">matlab函数杂谈</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/10/hexo优化/">hexo优化·年轻就是折腾 | Promotion of the Blog & Young for Try</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/06/hexo+github博客搭建中出现的问题及解决方法/">hexo+github博客搭建中出现的问题及解决方法 | The Solution of Troubles in Establishing My Blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/06/Hello World/">Hello World！</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2018 胡博靖
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span> | </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+	
+
+</footer>
+
+
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 19;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 快回来~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 欢迎回来~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
