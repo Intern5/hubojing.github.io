@@ -16,7 +16,7 @@
 
 
 <meta name="description" content="坐在电脑前，我们常看见电脑页面等待的画面，就是一个圆不停的转。常让人等得怒火直冒，想碾碎电脑。（这么暴力的并不是我~）现在就来说说，怎么制作这个动画效果。并不难。先来看看效果怎么样：">
-<meta name="keywords" content="blog,PPT动画">
+<meta name="keywords" content="PPT动画,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PPT动画制作之登录等待">
 <meta property="og:url" content="http://hubojing.github.io/2016/03/08/PPT动画制作之登录等待/index.html">
@@ -108,7 +108,7 @@
 
         
         <p class="header-subtitle">小清新IT旅程|为中华崛起读书</p>
-        <p class="post-count">已写133.4k字</p>
+        <p class="post-count">已写134.2k字</p>
         
 
         
@@ -627,6 +627,8 @@
 
     </div>
     
+    <script src="/js/GithubRepoWidget.js"></script>
+
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
     <script>
@@ -649,6 +651,27 @@
 
 
 
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
@@ -658,7 +681,7 @@
     // Open in New Window
     
         var oOpenInNew = {
-            
+             github: ".github-widget a", 
             
             
             

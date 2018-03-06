@@ -17,6 +17,26 @@
 <li>解：显示颜色64K，故每个像素需要2个字节表示。1024x1024=1048576(个像素)，1048576x2=2097152(字节)<br>2097152/1024/1024=2MB</li>
 </ul>
 </blockquote>
+<h1><span id="光栅图形学算法">光栅图形学算法</span></h1><h2><span id="直线段的扫描转换算法">直线段的扫描转换算法</span></h2><p>P<sub>0</sub>（x<sub>0</sub>,y<sub>0</sub>）    P<sub>1</sub>(x<sub>1</sub>,y<sub>1</sub>)<br>y=kx+b<br>k=(y<sub>1</sub>-y<sub>o</sub>)/(x<sub>1</sub>-x<sub>0</sub>)  (x<sub>1</sub>≠x<sub>0</sub>)<br>假设x已知，即从x的起点xo开始，沿x方向前进一个像素（步长=1），可以计算出相应的y值。因为像素的坐标是整数，所以y值要进行取整处理。<br>如何把数学上的一个点扫描转换一个屏幕像素点？<br>如：P（1.7, 0.8）—(取整)—&gt;P(1, 0)<br>P(1.7, 0.8) -(+0.5)-&gt; p(2.2, 1.3)<br>P(2.2, 1.3) -(取整)-&gt; p(2, 1)<br>为提高效率，减小计算量，要把乘法消掉。</p>
+<h2><span id="直线绘制的三个著名的常用算法">直线绘制的三个著名的常用算法</span></h2><ol>
+<li>数值微分法（DDA）</li>
+<li>中点画线法</li>
+<li>Bresenham算法</li>
+</ol>
+<h3><span id="数值微分ddadigital-differential-analyzer">数值微分DDA（Digital Differential Analyzer）</span></h3><p>引进图形学中一个重要思想——增量思想<br>y<sub>i</sub>=kx<sub>i</sub>+b<br>y<sub>i+1</sub>=kx<sub>i+1</sub>+b<br>=k(x<sub>i</sub>+1)+b<br>=kx<sub>i</sub>+k+b<br>=kx<sub>i</sub>+b+k<br>=y<sub>i</sub>+k<br><strong>y<sub>i+1</sub>=y<sub>i</sub>+k</strong>    k即为增量<br>含义：当前步的y值等于前一步的y值加上斜率k<br>于是就把乘法和加法变成了一个加法。<br>但是，DDA画直线算法不适合|k|&gt;1，且不是最优算法。</p>
+<h3><span id="中点画线法">中点画线法</span></h3><p>直线的一般式方程：<br>F(x, y)=0<br>Ax+By+C=0<br>其中：A=-（△y）;     B=(△x);        C=-B(△x)<br>对于直线上的点：F(x, y)=0<br>对于直线上方的点：F(x, y) &gt; 0<br>对于直线下方的点：F(x, y) &lt; 0<br>每次在最大位移方向上走一步，而另一个方向是走步还是不走步要取决于中点误差项的判断。<br>假定：0≤|k|≤1。因此，每次在x方向上加1，y方向上加1或不变需要判断。</p>
+<p>P(x<sub>i</sub>, y<sub>i</sub>),P<sub>u</sub>(x<sub>i</sub>+1, y<sub>i</sub>+1)，P<sub>d</sub>(x<sub>i</sub>+1, y<sub>i</sub>) 设点M为midpoint（中点）(x<sub>i</sub>+1, y<sub>i</sub>+0.5)，设Q为横坐标为x<sub>i</sub>+1的在直线上的点。<br>如何判断Q在M上方还是下方？<br>把M带入理想直线方程：<br>F(x<sub>m</sub>, y<sub>m</sub>)=Ax<sub>m</sub>+By<sub>m</sub>+C</p>
+<p>d<sub>i</sub>=F(x<sub>m</sub>, y<sub>m</sub>)=F(x<sub>i</sub>+1, y<sub>i</sub>+0.5)<br>=A(x<sub>i</sub>+1)+B(y<sub>i</sub>+0.5)+C</p>
+<p>当d<0时，m在q下方，取p<sub>u<br>当d&gt;0时，M在Q上方，取P<sub>d</sub><br>当d=0时，M在直线上，选P<sub>d</sub>或P<sub>u</sub>均可。</0时，m在q下方，取p<sub></p>
+<p>分析中点画线算法计算量：<br>y=y+1 (d &lt; 0)<br>    y (d ≥ 0)<br>d<sub>i</sub>=A(x<sub>i</sub>+1)+B(y<sub>i</sub>+0.5)+C<br>为求d值，需两个乘法，四个加法。<br>也可采用增量计算来消除乘法。</p>
+<p>d<sub>0</sub>=F(x<sub>m0</sub>, y<sub>m0</sub>)<br>=F(x<sub>i</sub>+1, y<sub>i</sub>+0.5)<br>=A(x<sub>i</sub>+1)+B(y<sub>i</sub>+0.5)+C</p>
+<p>d<sub>1</sub>=F(x<sub>m1</sub>, y<sub>m1</sub>)<br>=F(x<sub>i</sub>+2, y<sub>i</sub>+1.5)<br>=A(x<sub>i</sub>+2)+B(y<sub>i</sub>+1.5)+C<br>=A(x<sub>i</sub>+1)+B(y<sub>i</sub>+0.5)+C+A+B<br>=d<sub>0</sub>+A+B</p>
+<p>或</p>
+<p>d<sub>1</sub>=F(x<sub>i</sub>+2, y<sub>i</sub>+0.5)<br>=A(x<sub>i</sub>+2)+B(y<sub>i</sub>+0.5)+C<br>=A(x<sub>i</sub>+1)+B(y<sub>i</sub>+0.5)+C+A<br>=d<sub>0</sub>+A</p>
+<p>d的初始值d<sub>0</sub>：<br>直线第一个像素P<sub>0</sub>(x<sub>0</sub>, y<sub>0</sub>)在直线上。<br>d<sub>0</sub>=F(x<sub>0</sub>+1, y<sub>0</sub>+0.5)<br>=A(x<sub>0</sub>+2)+B(y<sub>0</sub>+0.5)+C<br>=Ax<sub>0</sub>+By<sub>0</sub>+C+A+0.5B<br>=A+0.5B</p>
+<p>d<sub>new</sub>=d<sub>old</sub>+A+B  d &lt; 0<br>                d<sub>old</sub>+A    d ≥ 0<br>d<sub>0</sub>=A+0.5B</p>
+<p>中点算法至少可以和DDA算法一样好。由于只需判断d的正负即可，可用2d代替d来摆脱浮点运算，写出仅包含整数运算的算法。<br>这样，中点生成直线的算法提高到整数加法，优于DDA算法。</p>
+<p>打数学公式永远费劲 满脑子都是&lt; sub>下标字符</p>
 ]]></content>
       
         <categories>
@@ -1188,9 +1208,9 @@
         
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> 树 </tag>
+            
+            <tag> 数据结构 </tag>
             
         </tags>
         
@@ -3848,9 +3868,9 @@ d, --max-depth（所查看文件的深度）
         
         <tags>
             
-            <tag> blog </tag>
-            
             <tag> PPT动画 </tag>
+            
+            <tag> blog </tag>
             
         </tags>
         
