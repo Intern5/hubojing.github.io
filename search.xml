@@ -48,7 +48,9 @@
         
         <tags>
             
-            <tag> 计算机图形学，C++ </tag>
+            <tag> C++ </tag>
+            
+            <tag> 计算机图形学 </tag>
             
         </tags>
         
@@ -1208,9 +1210,9 @@
         
         <tags>
             
-            <tag> 树 </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> 树 </tag>
             
         </tags>
         
@@ -3868,9 +3870,9 @@ d, --max-depth（所查看文件的深度）
         
         <tags>
             
-            <tag> PPT动画 </tag>
-            
             <tag> blog </tag>
+            
+            <tag> PPT动画 </tag>
             
         </tags>
         
