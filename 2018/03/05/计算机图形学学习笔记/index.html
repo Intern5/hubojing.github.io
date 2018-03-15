@@ -24,7 +24,10 @@
 <meta property="og:description" content="每周一点图形学咯。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520270969097&di=6249ae8473ad4a9f1c580fbd5cf5ec41&imgtype=jpg&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D3288393722%2C1303109147%26fm%3D214%26gp%3D0.jpg">
-<meta property="og:updated_time" content="2018-03-06T15:52:29.918Z">
+<meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Bresenham%E8%A1%A8%E8%BE%BE%E5%BC%8F1.png?raw=true">
+<meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Bresenham%E8%A1%A8%E8%BE%BE%E5%BC%8F2.png?raw=true">
+<meta property="og:image" content="https://raw.githubusercontent.com/hubojing/BlogImages/64180628aa60fecc7cae6c31b462163583b9ee39/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Bresenham%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4.png">
+<meta property="og:updated_time" content="2018-03-15T13:48:33.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机图形学学习笔记">
 <meta name="twitter:description" content="每周一点图形学咯。">
@@ -108,7 +111,7 @@
 
         
         <p class="header-subtitle">小清新IT旅程|为中华崛起读书</p>
-        <p class="post-count">已写135.7k字</p>
+        <p class="post-count">已写136.0k字</p>
         
 
         
@@ -433,6 +436,21 @@
 <p>d的初始值d<sub>0</sub>：<br>直线第一个像素P<sub>0</sub>(x<sub>0</sub>, y<sub>0</sub>)在直线上。<br>d<sub>0</sub>=F(x<sub>0</sub>+1, y<sub>0</sub>+0.5)<br>=A(x<sub>0</sub>+2)+B(y<sub>0</sub>+0.5)+C<br>=Ax<sub>0</sub>+By<sub>0</sub>+C+A+0.5B<br>=A+0.5B</p>
 <p>d<sub>new</sub>=d<sub>old</sub>+A+B  d &lt; 0<br>                d<sub>old</sub>+A    d ≥ 0<br>d<sub>0</sub>=A+0.5B</p>
 <p>中点算法至少可以和DDA算法一样好。由于只需判断d的正负即可，可用2d代替d来摆脱浮点运算，写出仅包含整数运算的算法。<br>这样，中点生成直线的算法提高到整数加法，优于DDA算法。</p>
+<h3><span id="bresenham算法">Bresenham算法</span></h3><p>Bresenham提供了一个更一般的算法。该算法不仅有好的效率，而且有更广泛的适用范围。</p>
+<h4><span id="基本思想">基本思想</span></h4><p>通过各行、各列像素中心构造一组虚拟网格线，按照直线起点到终点的顺序，计算直线与各垂直网络线的交点，然后根据误差项的符号确定该列像素中与此交点最近的像素。<br>假设每次x+1，y的递增（减）量为0或1，它取决于实际直线与最近光栅网格点的距离，这个距离的最大误差为0.5。<br>误差项d的初值d<sub>0</sub>=0;d=d+k<br>一旦d≥1，就把它减去1，保证d的相对性，且在0、1之间。<br><img src="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Bresenham%E8%A1%A8%E8%BE%BE%E5%BC%8F1.png?raw=true" alt="表达式"><br>将算法效率提高到整数加法：<br>改进1：令e=d-0.5<br><img src="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Bresenham%E8%A1%A8%E8%BE%BE%E5%BC%8F2.png?raw=true" alt="表达式2"><br>e &gt; 0,y方向递增1；e &lt; 0,y方向不递增<br>e=0时，可任取上、下光栅点显示</p>
+<ul>
+<li>e<sub>初</sub>=-0.5</li>
+<li>每走一步有e=e+k</li>
+<li>if(e &gt; 0) then e=e-1<br>k=d<sub>y</sub>/d<sub>x</sub></li>
+</ul>
+<p>改进2：由于算法中只用到误差项的符号，于是可用e <em> 2 </em> △x来替换e。</p>
+<ul>
+<li>e<sub>初</sub>=-△x</li>
+<li>每走一步有e=e+2△y</li>
+<li>if(e &gt; 0) then e=e-2△x</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/hubojing/BlogImages/64180628aa60fecc7cae6c31b462163583b9ee39/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Bresenham%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4.png" alt="算法步骤"><br>Bresenham算法很像DDA算法，都是加斜率。<br>但DDA算法是每次求出一个新的y以后取整来画；Bresenham算法是判断符号来决定上下两个点。所以该算法集中了DDA和中点两个算法的优点，而且应用范围广泛。</p>
+<hr>
 <p>打数学公式永远费劲 满脑子都是&lt; sub>下标字符</p>
 
       
@@ -447,9 +465,9 @@
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2018/03/05/计算机图形学学习笔记/">计算机图形学学习笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">胡博靖</a></p>
-        <p><span class="post-count">本文字数:</span>1,130字</p>
+        <p><span class="post-count">本文字数:</span>1,512字</p>
         <p><span>发布时间:</span>2018-03-05, 21:55:05</p>
-        <p><span>最后更新:</span>2018-03-06, 23:52:29</p>
+        <p><span>最后更新:</span>2018-03-15, 21:48:33</p>
         
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/03/05/计算机图形学学习笔记/" title="计算机图形学学习笔记">http://hubojing.github.io/2018/03/05/计算机图形学学习笔记/</a>
@@ -517,7 +535,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">帧缓冲器及分辨率</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">光栅图形学算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">直线段的扫描转换算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">直线绘制的三个著名的常用算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.1.</span> <span class="toc-text">数值微分DDA（Digital Differential Analyzer）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.2.</span> <span class="toc-text">中点画线法</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">帧缓冲器及分辨率</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">光栅图形学算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">直线段的扫描转换算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">直线绘制的三个著名的常用算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.1.</span> <span class="toc-text">数值微分DDA（Digital Differential Analyzer）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.2.</span> <span class="toc-text">中点画线法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.3.</span> <span class="toc-text">Bresenham算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.3.1.</span> <span class="toc-text">基本思想</span></a></li></ol></li></ol></li></ol></li></ol>
         
     </div>
     <style>
