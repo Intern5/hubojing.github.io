@@ -9,49 +9,6 @@ body:after {
 body:after {
   clear: both;
 }
-.donate_bar {
-  text-align: center;
-  margin-top: 5%;
-}
-.donate_bar a.btn_donate {
-  display: inline-block;
-  width: 82px;
-  height: 82px;
-  margin-left: auto;
-  margin-right: auto;
-  background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
-  -webkit-transition: background 0s;
-  -moz-transition: background 0s;
-  -o-transition: background 0s;
-  -ms-transition: background 0s;
-  -webkit-transition: background 0s;
-  -moz-transition: background 0s;
-  -ms-transition: background 0s;
-  transition: background 0s;
-}
-.donate_bar a.btn_donate:hover {
-  background-position: 0 -82px;
-}
-.donate_bar .donate_txt {
-  display: block;
-  color: #9d9d9d;
-  font: 14px/2 "Microsoft Yahei";
-}
-.donate_bar.hidden {
-  display: none;
-}
-.post-donate {
-  margin-top: 80px;
-}
-#donate_guide {
-  height: 210px;
-  width: 420px;
-  margin: 0 auto;
-}
-#donate_guide img {
-  height: 200px;
-  height: 200px;
-}
 html,
 body,
 div,
@@ -583,9 +540,6 @@ a {
   }
   #container .ua {
     display: none !important;
-  }
-  #container .github-text {
-    display: none;
   }
   #container .copyright {
     font-size: 16px;
@@ -1127,36 +1081,10 @@ color
 .post-list li:hover a {
   color: #88acdb;
 }
-.article-entry .github-widget h3::after {
-  content: none;
-}
-.article-entry .github-widget .github-box {
-  font-size: 0.8125rem;
-}
-.article-entry .github-widget .github-box .github-box-title h3 {
-  font-size: 1rem;
-}
-.article-entry .github-widget .github-box .github-box-title .github-stats {
-  font-size: 0.6875rem;
-}
-.article-entry .github-widget .github-box .updated {
-  font-size: 0.6875rem;
-}
-.article-entry .github-widget .github-box .download {
-  font-size: 0.75rem;
-}
-.ui-tooltip {
-  padding: 6px;
-  max-width: 30em;
-  -webkit-box-shadow: 0 0 0.8em rgba(0,0,0,0.6);
-  box-shadow: 0 0 0.8em rgba(0,0,0,0.6);
-  color: #fff;
-  font-family: "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 0.9em;
-  background: rgba(0,0,0,0.65);
-}
-body .ui-tooltip {
-  border: 1px solid #fff;
+.pace .pace-progress {
+  background: #77b6ff;
+  -webkit-box-shadow: 0 0 10px rgba(119,182,255,0.7);
+  box-shadow: 0 0 10px rgba(119,182,255,0.7);
 }
 .article-entry ul > li,
 .share,
@@ -2181,14 +2109,14 @@ aside.comment-bar:active {
 }
 .article-entry pre,
 .article-entry .highlight {
-  background: rgba(32,34,37,0.85);
+  background: rgba(249,249,249,0.5);
   margin: auto;
   padding: 0.35em 1.5em;
   border-style: solid;
   border-color: #ddd;
   border-width: 1px;
   overflow: auto;
-  color: #c5c8c6;
+  color: #4d4d4c;
   line-height: 1.3rem;
 }
 .article-entry .highlight .gutter pre,
@@ -2205,7 +2133,7 @@ aside.comment-bar:active {
   text-shadow: none;
   padding: 0;
   background: none;
-  color: #c5c8c6;
+  color: #4d4d4c;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2234,7 +2162,7 @@ aside.comment-bar:active {
 }
 .article-entry .highlight figcaption {
   font-size: 0.85em;
-  color: #969896;
+  color: #8e908c;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -2261,7 +2189,7 @@ aside.comment-bar:active {
   border-style: solid;
   border-color: #ddd;
   border-width: 1px 0;
-  background: rgba(32,34,37,0.85);
+  background: rgba(249,249,249,0.5);
   padding: 15px 20px 15px 0;
 }
 .article-entry .gist .gist-file {
@@ -2287,8 +2215,8 @@ aside.comment-bar:active {
   border: none;
 }
 .article-entry .gist .gist-file .gist-meta {
-  background: rgba(32,34,37,0.85);
-  color: #969896;
+  background: rgba(249,249,249,0.5);
+  color: #8e908c;
   font: 0.85em "Lucida Grande", Verdana, "Helvetica Neue", Arial;
   text-shadow: 0 0;
   padding: 0;
@@ -2309,15 +2237,10 @@ aside.comment-bar:active {
   border-radius: 3px;
   -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.08);
   box-shadow: 1px 1px 1px rgba(0,0,0,0.08);
-  var: 3;
-  color: #fff;
-  background: rgba(153,204,153,0.7);
-  color: #808080;
-  background: rgba(255,250,165,0.7);
 }
 pre .comment,
 pre .title {
-  color: #969896;
+  color: #8e908c;
 }
 pre .variable,
 pre .attribute,
@@ -2331,7 +2254,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c66;
+  color: #c82829;
 }
 pre .number,
 pre .preprocessor,
@@ -2339,12 +2262,12 @@ pre .built_in,
 pre .literal,
 pre .params,
 pre .constant {
-  color: #de935f;
+  color: #f5871f;
 }
 pre .class,
 pre .ruby .class .title,
 pre .css .rules .attribute {
-  color: #b5bd68;
+  color: #718c00;
 }
 pre .string,
 pre .value,
@@ -2352,10 +2275,10 @@ pre .inheritance,
 pre .header,
 pre .ruby .symbol,
 pre .xml .cdata {
-  color: #b5bd68;
+  color: #718c00;
 }
 pre .css .hexcolor {
-  color: #8abeb7;
+  color: #3e999f;
 }
 pre .function,
 pre .python .decorator,
@@ -2365,11 +2288,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #81a2be;
+  color: #4271ae;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #b294bb;
+  color: #8959a8;
 }
 #footer {
   font-size: 0.8rem;

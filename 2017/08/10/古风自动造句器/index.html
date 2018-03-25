@@ -52,7 +52,7 @@
 
 
     <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/green/pace-theme-minimal.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="/css/style.css">
@@ -83,9 +83,7 @@
 </script>
 
 
-    <script>
-        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
-    </script>
+    <script> yiliaConfig.jquery_ui = [false]; </script>
 
 
 
@@ -95,7 +93,7 @@
 
 
 
-<link rel="stylesheet" href="http://disqus.hubojing.github.io/iDisqus.min.css">
+
 </head>
 <body>
   <div id="container">
@@ -112,7 +110,6 @@
 
         
         <p class="header-subtitle">小清新IT旅程|为中华崛起读书</p>
-        <p class="post-count">已写136.0k字</p>
         
 
         
@@ -192,15 +189,13 @@
                             
                                 <a class="fa GitHub" href="https://github.com/hubojing" title="GitHub"></a>
                             
-                                <a class="fa CSDN" href="http://blog.csdn.net/hubojing/" title="CSDN"></a>
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
-                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=92203594" title="网易云音乐"></a>
+                                <a class="fa CSDN" href="http://blog.csdn.net/hubojing/" title="CSDN"></a>
                             
                                 <a class="fa Quora" href="https://www.quora.com/profile/Bojing-Hu/" title="Quora"></a>
                             
                                 <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=417797456&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
@@ -340,15 +335,13 @@
                             
                                 <a class="fa GitHub" target="_blank" href="https://github.com/hubojing" title="GitHub"></a>
                             
-                                <a class="fa CSDN" target="_blank" href="http://blog.csdn.net/hubojing/" title="CSDN"></a>
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
-                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=92203594" title="网易云音乐"></a>
+                                <a class="fa CSDN" target="_blank" href="http://blog.csdn.net/hubojing/" title="CSDN"></a>
                             
                                 <a class="fa Quora" target="_blank" href="https://www.quora.com/profile/Bojing-Hu/" title="Quora"></a>
                             
                                 <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=417797456&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
             </nav>
@@ -439,18 +432,13 @@
     </div>
     
   </div>
-
-
-  
   
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2017/08/10/古风自动造句器/">古风自动造句器</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">胡博靖</a></p>
-        <p><span class="post-count">本文字数:</span>1,452字</p>
         <p><span>发布时间:</span>2017-08-10, 22:56:49</p>
         <p><span>最后更新:</span>2017-08-10, 22:56:49</p>
-        
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/08/10/古风自动造句器/" title="古风自动造句器">http://hubojing.github.io/2017/08/10/古风自动造句器/</a>
             <span class="copy-path" data-clipboard-text="原文: http://hubojing.github.io/2017/08/10/古风自动造句器/　　作者: 胡博靖" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -481,37 +469,6 @@
     </nav>
 
   
-  
-  
-  
-  
-  
-  
-	<! -- 添加捐赠图标 -->
-<div class ="post-donate">
-    <div id="donate_board" class="donate_bar center">
-        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
-        <span class="donate_txt">
-           &uarr;<br>
-		   装成好像很多人打赏的样子 (￣▽￣)&quot;
-        </span>
-        <br>
-      </div>  
-	<div id="donate_guide" class="donate_bar center hidden" >
-		<!-- 支付宝打赏图案 -->
-		<img src="/img/alipay.jpg" alt="支付宝打赏"> 
-		<!-- 微信打赏图案 -->
-		<img src="/img/wechat.jpg" alt="微信打赏">  
-    </div>
-	<script type="text/javascript">
-		document.getElementById('btn_donate').onclick = function(){
-			$('#donate_board').addClass('hidden');
-			$('#donate_guide').removeClass('hidden');
-		}
-	</script>
-</div>
-<! -- 添加捐赠图标 -->
-
 </article>
 
     <div id="toc" class="toc-article">
@@ -567,24 +524,64 @@
 
 
     
-	
-	
-	
         <section id="comments">
-    <div id="comment"></div>
-    <script src="http://disqus.hubojing.github.io/iDisqus.min.js"></script>
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
     <script>
-    var disq = new iDisqus('comment', {
-        forum: 'hubojing',
-        site: 'http://hubojing.github.io',
-        api: 'http://disqus.hubojing.github.io',
-        mode: 1,
-        timeout: 3000,
-        slug: location.pathname.slice(1).split('.')[0],
-        init: true,
-    });
+        var disqus_config = function(){
+            this.page.url = 'http://hubojing.github.io/2017/08/10/古风自动造句器/';
+            this.page.identifier = '2017/08/10/古风自动造句器/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//hubojing.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
     </script>
+    
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
+
 </section>
+
+
+    // Add comment count
+    <script id="dsq-count-scr" src="//hubojing.disqus.com/count.js" async></script>
+    <span class="disqus-comment-count" data-disqus-identifier="2017/08/10/古风自动造句器/"></span>
+    <span class="disqus-comment-count" data-disqus-url="http://hubojing.github.io/2017/08/10/古风自动造句器/"></span>
+    <script>
+        $(".disqus-comment-count").hide();
+        var $disqusCount = $(".disqus-comment-count");
+        $disqusCount.bind("DOMNodeInserted", function(e) {
+            $(".count-comment").text(
+                $(this).text().replace(/[^0-9]/ig,"")
+            )
+            DISQUSWIDGETS.getCount({reset: true});
+        })
+    </script>
 
     
 
@@ -636,26 +633,20 @@
                     </span>
                 
                 
-                    <span> | </span>
+                    <span>| </span>
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
             </div>
         
     </div>
-	
-
 </footer>
-
-
     </div>
     
-    <script src="/js/GithubRepoWidget.js"></script>
-
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
     <script>
@@ -678,27 +669,6 @@
 
 
 
-    <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
@@ -708,7 +678,7 @@ MathJax.Hub.Queue(function() {
     // Open in New Window
     
         var oOpenInNew = {
-             github: ".github-widget a", 
+            
             
             
             
