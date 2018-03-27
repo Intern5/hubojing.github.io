@@ -15,20 +15,21 @@
 
 
 
-<meta name="description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp">
+<meta name="description" content="VS2013+ffmpeg开发环境搭建。">
 <meta name="keywords" content="C++,ffmpeg">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ffmpeg开发环境搭建">
 <meta property="og:url" content="http://hubojing.github.io/2018/02/22/ffmpeg开发环境搭建/index.html">
 <meta property="og:site_name" content="胡博靖的技术博客">
-<meta property="og:description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1519277154249&amp;amp;di=8b9a60a72da8a1979c84f0f3bd11dfc1&amp;amp;imgtype=j">
+<meta property="og:description" content="VS2013+ffmpeg开发环境搭建。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519277154249&di=8b9a60a72da8a1979c84f0f3bd11dfc1&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D1768997415%2C378959485%26fm%3D214%26gp%3D0.jpg">
 <meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/ffmpeg%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94test%E7%BB%93%E6%9E%9C.png?raw=true">
 <meta property="og:updated_time" content="2018-02-22T03:36:49.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ffmpeg开发环境搭建">
-<meta name="twitter:description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1519277154249&amp;amp;di=8b9a60a72da8a1979c84f0f3bd11dfc1&amp;amp;imgtype=j">
-<meta name="twitter:image" content="https://github.com/hubojing/BlogImages/blob/master/ffmpeg%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94test%E7%BB%93%E6%9E%9C.png?raw=true">
+<meta name="twitter:description" content="VS2013+ffmpeg开发环境搭建。">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519277154249&di=8b9a60a72da8a1979c84f0f3bd11dfc1&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D1768997415%2C378959485%26fm%3D214%26gp%3D0.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -396,45 +397,28 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>&lt;div align=&quot;left&quot;&gt;
-&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1519277154249&amp;di=8b9a60a72da8a1979c84f0f3bd11dfc1&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D1768997415%2C378959485%26fm%3D214%26gp%3D0.jpg&quot; width=&quot;300&quot; height=&quot;180&quot; style=&quot;float:right;&quot;/&gt;</p>
-<p><strong>VS2013+ffmpeg开发环境搭建。</strong></p>
-<p>&lt;/div&gt;</p>
-<p>&lt;!--more--&gt;</p>
-<h1><span id="下载">下载</span></h1>
-<p>https://ffmpeg.zeranoe.com/builds/</p>
+        <div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1519277154249&di=8b9a60a72da8a1979c84f0f3bd11dfc1&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D1768997415%2C378959485%26fm%3D214%26gp%3D0.jpg" width="300" height="180" style="float:right;"><br><br><br>　　<strong>VS2013+ffmpeg开发环境搭建。</strong><br><br><br> </div>
+
+<a id="more"></a>
+<h1><span id="下载">下载</span></h1><p>　　<a href="https://ffmpeg.zeranoe.com/builds/" target="_blank" rel="noopener">https://ffmpeg.zeranoe.com/builds/</a></p>
 <ul>
 <li>Static版本包含ffmpeg.exe 、ffplay.exe 、ffprobe.exe，相关的DLL已经被编译到exe里。</li>
 <li>Shared版本除了ffmpeg.exe , ffplay.exe , ffprobe.exe之外还有一些DLL，exe体积很小，在运行时到相应的DLL中调用功能。</li>
 <li>Dev开发者（developer）版本，包含了库文件xxx.lib以及头文件xxx.h，不含exe文件。</li>
 </ul>
 <p>这里选择下载Shared版本和Dev版本。（ffmpeg.exe 、ffplay.exe 、ffprobe.exe可以直接通过命令行运行使用）</p>
-<p>或者直接下载我打包好的环境配置文件：
-http://download.csdn.net/download/hubojing/10254452
-（csdn现在没免费的了，就勾了最低的2分）</p>
-<h1><span id="配置">配置</span></h1>
-<ol>
+<p>或者直接下载我打包好的环境配置文件：<br><a href="http://download.csdn.net/download/hubojing/10254452" target="_blank" rel="noopener">http://download.csdn.net/download/hubojing/10254452</a><br>（csdn现在没免费的了，就勾了最低的2分）</p>
+<h1><span id="配置">配置</span></h1><ol>
 <li>将dev版本文件夹中的Include和lib目录复制到所需工程项目目录下，并在工程属性中设置附加包含目录<code>$(ProjectDir)\include</code>和附加库目录<code>$(ProjectDir)\lib</code>。</li>
 <li>将share版本文件夹中bin目录下对应的所有dll复制到项目路径下。</li>
-<li>附加依赖项填入（根据所需）
-avcodec.lib
-avdevice.lib
-avfilter.lib
-avformat.lib
-avutil.lib
-postproc.lib
-swresample.lib
-swscale.lib</li>
+<li>附加依赖项填入（根据所需）<br>avcodec.lib<br>avdevice.lib<br>avfilter.lib<br>avformat.lib<br>avutil.lib<br>postproc.lib<br>swresample.lib<br>swscale.lib</li>
 </ol>
-<p>由于ffmpeg是C语言所写，include头文件时需使用extern &quot;C&quot;标明。</p>
-<h1><span id="测试">测试</span></h1>
-<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">extern &quot;C&quot;</span><br><span class="line">&#123;</span><br><span class="line">#include &lt;libavformat/avformat.h&gt;</span><br><span class="line">#include &lt;libavutil/dict.h&gt;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int main(int argc, char **argv)</span><br><span class="line">&#123;</span><br><span class="line">	AVFormatContext *fmt_ctx = NULL;</span><br><span class="line">	AVDictionaryEntry *tag = NULL;</span><br><span class="line">	int ret;</span><br><span class="line"></span><br><span class="line">	if (argc != 2) &#123;</span><br><span class="line">		printf(&quot;usage: %s &lt;input_file&gt;\n&quot;</span><br><span class="line">			&quot;example program to demonstrate the use of the libavformat metadata API.\n&quot;</span><br><span class="line">			&quot;\n&quot;, argv[0]);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 1;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if ((ret = avformat_open_input(&amp;fmt_ctx, argv[1], NULL, NULL)))</span><br><span class="line">		return ret;</span><br><span class="line"></span><br><span class="line">	while ((tag = av_dict_get(fmt_ctx-&gt;metadata, &quot;&quot;, tag, AV_DICT_IGNORE_SUFFIX)))</span><br><span class="line">		printf(&quot;%s=%s\n&quot;, tag-&gt;key, tag-&gt;value);</span><br><span class="line"></span><br><span class="line">	avformat_close_input(&amp;fmt_ctx);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>测试结果：
-<img src="https://github.com/hubojing/BlogImages/blob/master/ffmpeg%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94test%E7%BB%93%E6%9E%9C.png?raw=true" alt="test"></p>
+<p>　　由于ffmpeg是C语言所写，include头文件时需使用extern “C”标明。</p>
+<h1><span id="测试">测试</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">extern &quot;C&quot;</span><br><span class="line">&#123;</span><br><span class="line">#include &lt;libavformat/avformat.h&gt;</span><br><span class="line">#include &lt;libavutil/dict.h&gt;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int main(int argc, char **argv)</span><br><span class="line">&#123;</span><br><span class="line">	AVFormatContext *fmt_ctx = NULL;</span><br><span class="line">	AVDictionaryEntry *tag = NULL;</span><br><span class="line">	int ret;</span><br><span class="line"></span><br><span class="line">	if (argc != 2) &#123;</span><br><span class="line">		printf(&quot;usage: %s &lt;input_file&gt;\n&quot;</span><br><span class="line">			&quot;example program to demonstrate the use of the libavformat metadata API.\n&quot;</span><br><span class="line">			&quot;\n&quot;, argv[0]);</span><br><span class="line">		system(&quot;pause&quot;);</span><br><span class="line">		return 1;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if ((ret = avformat_open_input(&amp;fmt_ctx, argv[1], NULL, NULL)))</span><br><span class="line">		return ret;</span><br><span class="line"></span><br><span class="line">	while ((tag = av_dict_get(fmt_ctx-&gt;metadata, &quot;&quot;, tag, AV_DICT_IGNORE_SUFFIX)))</span><br><span class="line">		printf(&quot;%s=%s\n&quot;, tag-&gt;key, tag-&gt;value);</span><br><span class="line"></span><br><span class="line">	avformat_close_input(&amp;fmt_ctx);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试结果：<br><img src="https://github.com/hubojing/BlogImages/blob/master/ffmpeg%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E2%80%94%E2%80%94test%E7%BB%93%E6%9E%9C.png?raw=true" alt="test"></p>
 <p>至此，开发环境已就位。</p>
 <p>参考：<a href="http://blog.csdn.net/spaceyqy/article/details/43115391" target="_blank" rel="noopener">vs2013+ffmpeg开发环境搭建</a></p>
-<p>资料：<a href="http://blog.csdn.net/leixiaohua1020/article/details/15811977#comments" target="_blank" rel="noopener">FFMPEG视音频编解码零基础学习方法</a>
-<a href="http://ffmpeg.org/documentation.html" target="_blank" rel="noopener">ffmpeg官方文档</a></p>
+<p>资料：<a href="http://blog.csdn.net/leixiaohua1020/article/details/15811977#comments" target="_blank" rel="noopener">FFMPEG视音频编解码零基础学习方法</a><br><a href="http://ffmpeg.org/documentation.html" target="_blank" rel="noopener">ffmpeg官方文档</a></p>
 
       
     </div>

@@ -15,19 +15,20 @@
 
 
 
-<meta name="description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9">
+<meta name="description" content="浅谈递归。">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="递归中的return">
 <meta property="og:url" content="http://hubojing.github.io/2018/02/22/递归中的return/index.html">
 <meta property="og:site_name" content="胡博靖的技术博客">
-<meta property="og:description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B">
+<meta property="og:description" content="浅谈递归。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B.jpg?raw=true">
 <meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B.jpg?raw=true">
 <meta property="og:updated_time" content="2018-02-23T05:22:02.305Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="递归中的return">
-<meta name="twitter:description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B">
+<meta name="twitter:description" content="浅谈递归。">
 <meta name="twitter:image" content="https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B.jpg?raw=true">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -396,49 +397,35 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>&lt;div align=&quot;left&quot;&gt;
-&lt;img src=&quot;https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B.jpg?raw=true&quot; width=&quot;300&quot; height=&quot;180&quot; style=&quot;float:right;&quot;/&gt;</p>
-<p><strong>浅谈递归。</strong></p>
-<p>&lt;/div&gt;</p>
-<p>&lt;!--more--&gt;
-　　递归的核心是重复和嵌套。
-　　看到的一个惊人比喻来解释什么是递归：</p>
+        <div align="left"><br><img src="https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B.jpg?raw=true" width="300" height="180" style="float:right;"><br><br><br>　　<strong>浅谈递归。</strong><br><br><br> </div>
+
+<a id="more"></a>
+<p>　　递归的核心是重复和嵌套。<br>　　看到的一个惊人比喻来解释什么是递归：</p>
 <blockquote>
 <p>古之欲明明德于天下者，先治其国；欲治其国者，先齐其家；欲齐其家者，先修其身；欲修其身者，先正其心；欲正其心者，先诚其意；欲诚其意者，先致其知，致知在格物。物格而后知至，知至而后意诚，意诚而后心正，心正而后身修，身修而后家齐，家齐而后国治，国治而后天下平。</p>
 </blockquote>
-<p>可以理解为调用自身的过程，最外层函数是“明德于天下”，每一层传入的参数依次是治国、齐家、修身、正心、诚意、致知、格物。然后再从最内层逐层返回。</p>
-<p>如果文言比较难理解，看到的另外一个好解释，以查字典作比：</p>
+<p>　　可以理解为调用自身的过程，最外层函数是“明德于天下”，每一层传入的参数依次是治国、齐家、修身、正心、诚意、致知、格物。然后再从最内层逐层返回。</p>
+<p>　　如果文言比较难理解，看到的另外一个好解释，以查字典作比：</p>
 <blockquote>
 <p>我们使用的词典，本身就是递归，为了解释一个词，需要使用更多的词。当你查一个词，发现这个词的解释中某个词仍然不懂，于是你开始查这第二个词，可惜，第二个词里仍然有不懂的词，于是查第三个词，这样查下去，直到有一个词的解释是你完全能看懂的，那么递归走到了尽头，然后你开始后退，逐个明白之前查过的每一个词，最终，你明白了最开始那个词的意思。</p>
 </blockquote>
-<p>本文的右上方配图很直观说明了递归的层次关系。现放大如下：
-<img src="https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B.jpg?raw=true" alt="递归层次"></p>
-<p>但递归不该是无限的。所以，这样的比喻欠妥：</p>
+<p>　　本文的右上方配图很直观说明了递归的层次关系。现放大如下：<br><img src="https://github.com/hubojing/BlogImages/blob/master/%E9%80%92%E5%BD%92%E4%B8%AD%E7%9A%84return%E2%80%94%E2%80%94%E9%80%92%E5%BD%92%E6%B5%81%E7%A8%8B.jpg?raw=true" alt="递归层次"></p>
+<p>　　但递归不该是无限的。所以，这样的比喻欠妥：</p>
 <blockquote>
-<p>从前有座山，山里有个庙，庙里有个老和尚，他在讲：
-从前有座山，山里有个庙，庙里有个老和尚，他在讲：
-……</p>
+<p>从前有座山，山里有个庙，庙里有个老和尚，他在讲：<br>从前有座山，山里有个庙，庙里有个老和尚，他在讲：<br>……</p>
 </blockquote>
-<p>因为这个调用自身的情况没有尽头，也就是没有返回条件。如果是实际情况估计会内存溢出。</p>
-<p>所以递归中的返回条件是很重要的，常以程序里的return示之。所以要看清，return后是返回到了哪里。笼统地说，遇到return就会跳出函数。细致一点，return是返回到被调用处。在递归函数里，遇到return退出了这一次的调用，回到被调用处即上一层调用递归处。</p>
-<p>eg.
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">bool Traverse()</span><br><span class="line">&#123;</span><br><span class="line">	if(满足条件)</span><br><span class="line">    &#123;</span><br><span class="line">    	return true;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">    	bool bFlag = Traverse();//递归</span><br><span class="line">        if(bFlag == true)</span><br><span class="line">        &#123;</span><br><span class="line">        	return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>梳理这段代码。干脆，把“满足条件”设为“中彩票”吧。第一次进入Traverse()函数，如果中了彩票，就返回true，跳出Traverse()函数。如果没中彩票，就调用递归（即第二次进入Traverse()函数）。
-　　在第二次Traverse()函数里，如果中了彩票就返回true,跳出<strong>第二次Traverse()函数</strong>，返回到被调用处，即bool bFlag=Traverse();这里，此时，bFlag的值为true。接着判断bFlag的值是否为true，如果为true，则返回true，跳出<strong>第一次Traverse()函数</strong>。这样子Traverse()函数的调用才算结束。
-在第二次Traverse()函数里，如果没中彩票，就调用递归（即进入第三次Traverse()函数）。
-　　在第三次Traverse()函数里……</p>
-<p>会发现第n+1次和第n次的调用方法是一样一样的。不过既然递归次数应该有限，那么也就是说，经过x次递归后，必中彩票。（x是有限次）</p>
-<p>例子归例子，我们知道，现实生活中彩票依概率满足“无限递归”（编程里不被允许），x依概率趋近于无穷大。</p>
-<p>其中需要引起重视的是，
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(bFlag == true)</span><br><span class="line">&#123;</span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这个判断在很多时候是非常重要的。因为子递归时多数场合需得到该层递归的返回值，来判断究竟是再次递归呢，还是已得到目标值返回到上一层。</p>
-<p>如果是不需要返回值的递归，就易懂得多了。
-　　eg.
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int iAge = 0;</span><br><span class="line">void Grow()</span><br><span class="line">&#123;</span><br><span class="line">	iAge++;</span><br><span class="line">    if(iAge &gt; 18)</span><br><span class="line">    &#123;</span><br><span class="line">    	cout&lt;&lt;&quot;成年啦！&quot;&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">    	Grow();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>虽然没有用return返回要求值，但实质一样，通过条件语句及递归调用自身累加类变量iAge，得到了所需值。</p>
-<p>浅谈递归，如有错误，不吝赐教。^_^</p>
-<p>相关：<a href="https://www.zhihu.com/question/20507130" target="_blank" rel="noopener">什么是递归？</a>
-（抖机灵太多......）</p>
+<p>　　因为这个调用自身的情况没有尽头，也就是没有返回条件。如果是实际情况估计会内存溢出。</p>
+<p>　　所以递归中的返回条件是很重要的，常以程序里的return示之。所以要看清，return后是返回到了哪里。笼统地说，遇到return就会跳出函数。细致一点，return是返回到被调用处。在递归函数里，遇到return退出了这一次的调用，回到被调用处即上一层调用递归处。</p>
+<p>　eg.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">bool Traverse()</span><br><span class="line">&#123;</span><br><span class="line">	if(满足条件)</span><br><span class="line">    &#123;</span><br><span class="line">    	return true;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">    	bool bFlag = Traverse();//递归</span><br><span class="line">        if(bFlag == true)</span><br><span class="line">        &#123;</span><br><span class="line">        	return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　梳理这段代码。干脆，把“满足条件”设为“中彩票”吧。第一次进入Traverse()函数，如果中了彩票，就返回true，跳出Traverse()函数。如果没中彩票，就调用递归（即第二次进入Traverse()函数）。<br>　　在第二次Traverse()函数里，如果中了彩票就返回true,跳出<strong>第二次Traverse()函数</strong>，返回到被调用处，即bool bFlag=Traverse();这里，此时，bFlag的值为true。接着判断bFlag的值是否为true，如果为true，则返回true，跳出<strong>第一次Traverse()函数</strong>。这样子Traverse()函数的调用才算结束。<br>在第二次Traverse()函数里，如果没中彩票，就调用递归（即进入第三次Traverse()函数）。<br>　　在第三次Traverse()函数里……</p>
+<p>　　会发现第n+1次和第n次的调用方法是一样一样的。不过既然递归次数应该有限，那么也就是说，经过x次递归后，必中彩票。（x是有限次）</p>
+<p>　　例子归例子，我们知道，现实生活中彩票依概率满足“无限递归”（编程里不被允许），x依概率趋近于无穷大。</p>
+<p>　　其中需要引起重视的是，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(bFlag == true)</span><br><span class="line">&#123;</span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　这个判断在很多时候是非常重要的。因为子递归时多数场合需得到该层递归的返回值，来判断究竟是再次递归呢，还是已得到目标值返回到上一层。</p>
+<p>　　如果是不需要返回值的递归，就易懂得多了。<br>　　eg.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int iAge = 0;</span><br><span class="line">void Grow()</span><br><span class="line">&#123;</span><br><span class="line">	iAge++;</span><br><span class="line">    if(iAge &gt; 18)</span><br><span class="line">    &#123;</span><br><span class="line">    	cout&lt;&lt;&quot;成年啦！&quot;&lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">    	Grow();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>　　虽然没有用return返回要求值，但实质一样，通过条件语句及递归调用自身累加类变量iAge，得到了所需值。</p>
+<p>　　浅谈递归，如有错误，不吝赐教。^_^</p>
+<p>相关：<a href="https://www.zhihu.com/question/20507130" target="_blank" rel="noopener">什么是递归？</a><br>（抖机灵太多……）</p>
 
       
     </div>

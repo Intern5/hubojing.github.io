@@ -15,21 +15,22 @@
 
 
 
-<meta name="description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp">
+<meta name="description" content="Android Studio配置内嵌JDK。">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Studio配置JDK">
 <meta property="og:url" content="http://hubojing.github.io/2018/02/23/AndroidStudio配置JDK/index.html">
 <meta property="og:site_name" content="胡博靖的技术博客">
-<meta property="og:description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1520102177973&amp;amp;di=b292a9132576d506db589613a4e1bb4a&amp;amp;imgtype=0">
+<meta property="og:description" content="Android Studio配置内嵌JDK。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520102177973&di=b292a9132576d506db589613a4e1bb4a&imgtype=0&src=http%3A%2F%2Fwww.eightbitdreams.com%2Fwp-content%2Fuploads%2F2015%2F05%2Fandroid-studio-logo.png">
 <meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/AndroidStudio%E9%85%8D%E7%BD%AEJDK%E2%80%94%E2%80%94JDK%E9%80%89%E9%A1%B9.png?raw=true">
 <meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/AndroidStudio%E9%85%8D%E7%BD%AEJDK%E2%80%94%E2%80%94%E6%B5%8B%E8%AF%95.png?raw=true">
 <meta property="og:updated_time" content="2018-02-23T15:34:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Studio配置JDK">
-<meta name="twitter:description" content="&amp;lt;div align=&amp;quot;left&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1520102177973&amp;amp;di=b292a9132576d506db589613a4e1bb4a&amp;amp;imgtype=0">
-<meta name="twitter:image" content="https://github.com/hubojing/BlogImages/blob/master/AndroidStudio%E9%85%8D%E7%BD%AEJDK%E2%80%94%E2%80%94JDK%E9%80%89%E9%A1%B9.png?raw=true">
+<meta name="twitter:description" content="Android Studio配置内嵌JDK。">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520102177973&di=b292a9132576d506db589613a4e1bb4a&imgtype=0&src=http%3A%2F%2Fwww.eightbitdreams.com%2Fwp-content%2Fuploads%2F2015%2F05%2Fandroid-studio-logo.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -397,26 +398,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>&lt;div align=&quot;left&quot;&gt;
-&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1520102177973&amp;di=b292a9132576d506db589613a4e1bb4a&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.eightbitdreams.com%2Fwp-content%2Fuploads%2F2015%2F05%2Fandroid-studio-logo.png&quot; width=&quot;300&quot; height=&quot;180&quot; style=&quot;float:right;&quot;/&gt;</p>
-<p><strong>Android Studio配置内嵌JDK。</strong></p>
-<p>&lt;/div&gt;</p>
-<p>&lt;!--more--&gt;
-　　今天发现JDK环境变量没有配置好。</p>
-<p>我没有专门去下载java，在下载Android Studio时，会自带内嵌的JDK。
-　　打开File-OtherSettings-DefaultProjectStructure，可看到AS已自动勾选Use embedded JDK，而且是官方推荐的做法。
-<img src="https://github.com/hubojing/BlogImages/blob/master/AndroidStudio%E9%85%8D%E7%BD%AEJDK%E2%80%94%E2%80%94JDK%E9%80%89%E9%A1%B9.png?raw=true" alt="JDK选项"></p>
-<p>以下是配置环境变量的操作。
-　　java 1.8以后就无需CLASSPATH环境变量了。
-　　我们只需配置JAVA_HOME和PATH即可。
-　　JAVA_HOME	C:\AndroidStudio\jre	(JDK安装目录)
-　　在PATH后新增：
-　　%JAVA_HOME%\bin
-　　%JAVA_HOME%\jre\bin</p>
-<p>测试一下：
-　　在cmd中查看java版本。
-<img src="https://github.com/hubojing/BlogImages/blob/master/AndroidStudio%E9%85%8D%E7%BD%AEJDK%E2%80%94%E2%80%94%E6%B5%8B%E8%AF%95.png?raw=true" alt="测试">
-　　成功。</p>
+        <div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520102177973&di=b292a9132576d506db589613a4e1bb4a&imgtype=0&src=http%3A%2F%2Fwww.eightbitdreams.com%2Fwp-content%2Fuploads%2F2015%2F05%2Fandroid-studio-logo.png" width="300" height="180" style="float:right;"><br><br><br>　　<strong>Android Studio配置内嵌JDK。</strong><br><br><br> </div>
+
+<a id="more"></a>
+<p>　　今天发现JDK环境变量没有配置好。</p>
+<p>　　我没有专门去下载java，在下载Android Studio时，会自带内嵌的JDK。<br>　　打开File-OtherSettings-DefaultProjectStructure，可看到AS已自动勾选Use embedded JDK，而且是官方推荐的做法。<br><img src="https://github.com/hubojing/BlogImages/blob/master/AndroidStudio%E9%85%8D%E7%BD%AEJDK%E2%80%94%E2%80%94JDK%E9%80%89%E9%A1%B9.png?raw=true" alt="JDK选项"></p>
+<p>　　以下是配置环境变量的操作。<br>　　java 1.8以后就无需CLASSPATH环境变量了。<br>　　我们只需配置JAVA_HOME和PATH即可。<br>　　JAVA_HOME    C:\AndroidStudio\jre    (JDK安装目录)<br>　　在PATH后新增：<br>　　%JAVA_HOME%\bin<br>　　%JAVA_HOME%\jre\bin</p>
+<p>　　测试一下：<br>　　在cmd中查看java版本。<br><img src="https://github.com/hubojing/BlogImages/blob/master/AndroidStudio%E9%85%8D%E7%BD%AEJDK%E2%80%94%E2%80%94%E6%B5%8B%E8%AF%95.png?raw=true" alt="测试"><br>　　成功。</p>
 
       
     </div>
