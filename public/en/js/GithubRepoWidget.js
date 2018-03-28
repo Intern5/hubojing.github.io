@@ -62,11 +62,11 @@
 
 				widget = '<div class="github-box repo">'+
 					'<div class="github-box-title">'+
-					'<h3><span id="vendorname-reponame">'+
-					''+
+					'<h3>'+
+					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
 					'<span class="path-divider">/</span>'+
-					''+
-					'</span></h3>'+
+					'<a class="repo" href="' + repoUrl + '" title="' + repoUrl + '">' + repoName + '</a>'+
+					'</h3>'+
 					'<div class="github-stats">'+
 					'<span class="github-text">Star </span>'+
 					'<a class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
