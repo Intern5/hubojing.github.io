@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hubojing.github.io/comment/index.html</loc>
+    
+    <lastmod>2018-03-29T16:19:31.886Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hubojing.github.io/about/index.html</loc>
     
-    <lastmod>2018-03-29T15:40:17.015Z</lastmod>
+    <lastmod>2018-03-29T16:18:56.816Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://hubojing.github.io/friends/index.html</loc>
     
     <lastmod>2018-03-29T15:01:08.070Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hubojing.github.io/comment/index.html</loc>
-    
-    <lastmod>2018-03-29T14:38:01.205Z</lastmod>
     
   </url>
   
@@ -478,14 +478,14 @@
   </url>
   
   <url>
-    <loc>https://hubojing.github.io//404.html</loc>
+    <loc>https://hubojing.github.io/public/en/about/index.html</loc>
     
     <lastmod>2016-08-06T09:18:26.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hubojing.github.io/public/en/about/index.html</loc>
+    <loc>https://hubojing.github.io//404.html</loc>
     
     <lastmod>2016-08-06T09:18:26.000Z</lastmod>
     
