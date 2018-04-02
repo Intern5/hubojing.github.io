@@ -256,8 +256,14 @@
 <p>如何设计一个算法描述任意两篇新闻的相似性？<br>用一个向量来描述一篇新闻。当夹角的余弦接近1时，相似，归为一类。夹角余弦越小，两条新闻越不相关。</p>
 </blockquote>
 </li>
-<li><p>叉积<br><img src="" alt="叉积公式"></p>
-</li>
+<li><p>叉积</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%8F%89%E7%A7%AF%E5%85%AC%E5%BC%8F.png?raw=true" alt="叉积公式" title="">
+                </div>
+                <div class="image-caption">叉积公式</div>
+            </figure></li>
 </ul>
 <ol>
 <li>axb和a、b两个向量都正交</li>
@@ -282,9 +288,29 @@
 <li><p>旋转变换</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x*=rcos(α+θ)=rcosαcosθ-rsinαsinθ</span><br><span class="line">y*=rsin(α+θ)=rcosasinθ+rsinαcosθ</span><br><span class="line">x*=xcosθ-ysinθ</span><br><span class="line">y*=xsinθ+ycosθ</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>错切变换<br>（未完待续）</p>
+<li><p>错切变换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">x*=x+cy</span><br><span class="line">y*=bx+y</span><br><span class="line">``` </span><br><span class="line">**坐标系变换**</span><br><span class="line">1.平移变换</span><br><span class="line">2.旋转变换</span><br><span class="line">**相对任意参考点的二维几何变换**</span><br><span class="line">比例、旋转变换等均与参考点相关。如要对某个参考点（xf，yf）作二维几何变换，其变换过程如下：</span><br><span class="line">a、将固定点移至坐标原点，此时进行平移变换</span><br><span class="line">b、针对原点进行二维几何变换</span><br><span class="line">c、进行反平移，将固定点又移回到原来的位置</span><br><span class="line">**二维变换矩阵**</span><br><span class="line">![二维变换矩阵](https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C%E7%BB%B4%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5.png?raw=true)</span><br><span class="line">![二维变换矩阵说明](https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C%E7%BB%B4%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5%E8%AF%B4%E6%98%8E.png?raw=true)</span><br><span class="line"></span><br><span class="line">### 窗口视区变换</span><br><span class="line">窗口：世界坐标系中药显示的区域成为窗口。</span><br><span class="line">视区：窗口映射到显示器（设备）上的区域称为视区。</span><br><span class="line">观察变换（Viewing Transformation），将窗口到视区的变换处理。</span><br><span class="line">![窗口视区变换](https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E7%AA%97%E5%8F%A3%E8%A7%86%E5%8C%BA%E5%8F%98%E6%8D%A2.png?raw=true)</span><br><span class="line">窗口到视区的映射是基于一个等式，即对每一个在世界坐标下的点（x,y），产生屏幕坐标系中的一个点（sx,sy）。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>sx=A<em>x+C<br>sy=B</em>y+D<br><code>`</code><br>A、B、C、D为常数<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E7%AA%97%E5%8F%A3%E8%A7%86%E5%8C%BA%E5%8F%98%E6%8D%A2%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB.png?raw=true" alt="映射关系" title="">
+                </div>
+                <div class="image-caption">映射关系</div>
+            </figure><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E7%AA%97%E5%8F%A3%E8%A7%86%E5%8C%BA%E5%8F%98%E6%8D%A2%E5%85%AC%E5%BC%8F1.png?raw=true" alt="公式" title="">
+                </div>
+                <div class="image-caption">公式</div>
+            </figure><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E7%AA%97%E5%8F%A3%E8%A7%86%E5%8C%BA%E5%8F%98%E6%8D%A2%E5%85%AC%E5%BC%8F2.png?raw=true" alt="公式" title="">
+                </div>
+                <div class="image-caption">公式</div>
+            </figure></p>
 ]]></content>
       
         <categories>
@@ -2050,9 +2076,9 @@
         
         <tags>
             
-            <tag> 数据结构 </tag>
-            
             <tag> 树 </tag>
+            
+            <tag> 数据结构 </tag>
             
         </tags>
         
