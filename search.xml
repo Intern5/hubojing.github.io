@@ -1233,7 +1233,7 @@
     <entry>
       <title><![CDATA[windows软件使用小技巧]]></title>
       <url>https://hubojing.github.io/2017/11/12/windows%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-      <content type="html"><![CDATA[<div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510501996085&di=21a819c4665e855e7e2a943cfb3c5da1&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F45%2F46%2F16E58PICUSf_1024.jpg" width="300" height="180" style="float:right;"><br> 　　<br>　　<br>稀（luan）奇（qi）古（ba）怪（zao）问题解决方案记录集。　　<br> 　　<br>　　<br> </div>
+      <content type="html"><![CDATA[<div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510501996085&di=21a819c4665e855e7e2a943cfb3c5da1&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F45%2F46%2F16E58PICUSf_1024.jpg" width="300" height="180" style="float:right;"><br> 　　<br>　　<br>小问题解决方案记录集。　　<br> 　　<br>　　<br> </div>
 
 <a id="more"></a>
 <h1 id="word打开提示setup-error（win7）"><a href="#word打开提示setup-error（win7）" class="headerlink" title="word打开提示setup error（win7）"></a>word打开提示setup error（win7）</h1><ul>
@@ -1263,6 +1263,7 @@
 <li>vs_ultimate.exe /uninstall /force</li>
 </ol>
 </blockquote>
+<h1 id="U盘格式转换"><a href="#U盘格式转换" class="headerlink" title="U盘格式转换"></a>U盘格式转换</h1><p>U盘单个4G以上的文件在ntfs格式下才可以放入。<br>convert命令FAT32转NTFS（不影响硬盘数据）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">convert i:/fs:ntfs</span><br><span class="line"># i为disk盘符</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       
         <categories>
@@ -1274,7 +1275,7 @@
         
         <tags>
             
-            <tag> 杂谈 </tag>
+            <tag> 备忘 </tag>
             
         </tags>
         
