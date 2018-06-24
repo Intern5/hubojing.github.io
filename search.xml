@@ -278,7 +278,7 @@
     <entry>
       <title><![CDATA[计算机图形学学习笔记]]></title>
       <url>https://hubojing.github.io/2018/03/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p><div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522260185415&di=c78f4ea45fb5db5337c73e8189e82ff8&imgtype=0&src=http%3A%2F%2Fp.ananas.chaoxing.com%2Fstar%2F1024_0%2F1385010809221kidou.jpg" width="300" height="180" style="float:right;"><br>　　<br>　　<strong>每周一点图形学。</strong><br>　　更新：Bresenham算法代码<br>   　　<br></div><br><a id="more"></a></p>
+      <content type="html"><![CDATA[<p><div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522260185415&di=c78f4ea45fb5db5337c73e8189e82ff8&imgtype=0&src=http%3A%2F%2Fp.ananas.chaoxing.com%2Fstar%2F1024_0%2F1385010809221kidou.jpg" width="300" height="180" style="float:right;"><br>　　<br>　　<strong>每周一点图形学暂停。</strong><br>　　最新：Bresenham算法代码<br>   　　<br></div><br><a id="more"></a></p>
 <h1 id="帧缓冲器及分辨率"><a href="#帧缓冲器及分辨率" class="headerlink" title="帧缓冲器及分辨率"></a>帧缓冲器及分辨率</h1><p>帧缓冲器每一个存储单元的位长决定了一幅画面上能同时显示的不同灰度的数目或颜色的种类。<br>如果是单色，则每个像素只需要1Bit表示；<br>如果是16色，则每个像素需要4Bit(2^4=16)表示；<br>如果是256色，则每个需要1个字节（8位，2^8=256）表示；<br>如果是65536（64K）色，则每个像素需要2个字节（16位，2^16=64K）表示；<br>如果是16777216（16.7M）色，则每个需要3个字节（24位，2^24=16.7M）表示（24位真彩色）。</p>
 <p>举例：显卡有2MB显存，当分辨率是1024x768时，可支持的色彩数又是多少？<br>2MB=2x1024x1024=2097152(字节)<br>1024x768=786432(个像素)<br>每个像素如果需要3个字节表示，将超过2MB显存，最多只需要2个字节表示，故只能支持64K色彩数。</p>
 <blockquote>

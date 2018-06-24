@@ -27,13 +27,13 @@
     
     
     <meta name="keywords" content="C++,计算机图形学">
-    <meta name="description" content="每周一点图形学。　　更新：Bresenham算法代码">
+    <meta name="description" content="每周一点图形学暂停。　　最新：Bresenham算法代码">
 <meta name="keywords" content="C++,计算机图形学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机图形学学习笔记">
 <meta property="og:url" content="https://hubojing.github.io/2018/03/05/计算机图形学学习笔记/index.html">
 <meta property="og:site_name" content="胡博靖的技术博客">
-<meta property="og:description" content="每周一点图形学。　　更新：Bresenham算法代码">
+<meta property="og:description" content="每周一点图形学暂停。　　最新：Bresenham算法代码">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522260185415&di=c78f4ea45fb5db5337c73e8189e82ff8&imgtype=0&src=http%3A%2F%2Fp.ananas.chaoxing.com%2Fstar%2F1024_0%2F1385010809221kidou.jpg">
 <meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%8F%89%E7%A7%AF%E5%85%AC%E5%BC%8F.png?raw=true">
@@ -54,10 +54,10 @@
 <meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94-%E5%B9%B3%E9%9D%A2%E5%87%A0%E4%BD%95%E6%8A%95%E5%BD%B1.png?raw=true">
 <meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94T3D.png?raw=true">
 <meta property="og:image" content="https://github.com/hubojing/BlogImages/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94Bresenham%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4.png?raw=true">
-<meta property="og:updated_time" content="2018-05-27T10:23:50.614Z">
+<meta property="og:updated_time" content="2018-06-24T13:18:50.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机图形学学习笔记">
-<meta name="twitter:description" content="每周一点图形学。　　更新：Bresenham算法代码">
+<meta name="twitter:description" content="每周一点图形学暂停。　　最新：Bresenham算法代码">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522260185415&di=c78f4ea45fb5db5337c73e8189e82ff8&imgtype=0&src=http%3A%2F%2Fp.ananas.chaoxing.com%2Fstar%2F1024_0%2F1385010809221kidou.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="胡博靖的技术博客" href="/atom.xml">
@@ -268,7 +268,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p><div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522260185415&di=c78f4ea45fb5db5337c73e8189e82ff8&imgtype=0&src=http%3A%2F%2Fp.ananas.chaoxing.com%2Fstar%2F1024_0%2F1385010809221kidou.jpg" width="300" height="180" style="float:right;"><br>　　<br>　　<strong>每周一点图形学。</strong><br>　　更新：Bresenham算法代码<br>   　　<br></div><br><a id="more"></a></p>
+            <p><div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1522260185415&di=c78f4ea45fb5db5337c73e8189e82ff8&imgtype=0&src=http%3A%2F%2Fp.ananas.chaoxing.com%2Fstar%2F1024_0%2F1385010809221kidou.jpg" width="300" height="180" style="float:right;"><br>　　<br>　　<strong>每周一点图形学暂停。</strong><br>　　最新：Bresenham算法代码<br>   　　<br></div><br><a id="more"></a></p>
 <h1 id="帧缓冲器及分辨率"><a href="#帧缓冲器及分辨率" class="headerlink" title="帧缓冲器及分辨率"></a>帧缓冲器及分辨率</h1><p>帧缓冲器每一个存储单元的位长决定了一幅画面上能同时显示的不同灰度的数目或颜色的种类。<br>如果是单色，则每个像素只需要1Bit表示；<br>如果是16色，则每个像素需要4Bit(2^4=16)表示；<br>如果是256色，则每个需要1个字节（8位，2^8=256）表示；<br>如果是65536（64K）色，则每个像素需要2个字节（16位，2^16=64K）表示；<br>如果是16777216（16.7M）色，则每个需要3个字节（24位，2^24=16.7M）表示（24位真彩色）。</p>
 <p>举例：显卡有2MB显存，当分辨率是1024x768时，可支持的色彩数又是多少？<br>2MB=2x1024x1024=2097152(字节)<br>1024x768=786432(个像素)<br>每个像素如果需要3个字节表示，将超过2MB显存，最多只需要2个字节表示，故只能支持64K色彩数。</p>
 <blockquote>
@@ -481,7 +481,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-05-27T10:23:50.614Z" itemprop="dateUpdated">2018-05-27 18:23:50</time>
+    最后更新时间：<time datetime="2018-06-24T13:18:50.910Z" itemprop="dateUpdated">2018-06-24 21:18:50</time>
 </span><br>
 
 
@@ -527,7 +527,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://hubojing.github.io/2018/03/05/计算机图形学学习笔记/&title=《计算机图形学学习笔记》 — 胡博靖的技术博客&source=　　　　每周一点图形学。　　更新：Bresenham算法代码   　　" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://hubojing.github.io/2018/03/05/计算机图形学学习笔记/&title=《计算机图形学学习笔记》 — 胡博靖的技术博客&source=　　　　每周一点图形学暂停。　　最新：Bresenham算法代码   　　" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -704,7 +704,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://hubojing.github.io/2018/03/05/计算机图形学学习笔记/&title=《计算机图形学学习笔记》 — 胡博靖的技术博客&source=　　　　每周一点图形学。　　更新：Bresenham算法代码   　　" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://hubojing.github.io/2018/03/05/计算机图形学学习笔记/&title=《计算机图形学学习笔记》 — 胡博靖的技术博客&source=　　　　每周一点图形学暂停。　　最新：Bresenham算法代码   　　" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
