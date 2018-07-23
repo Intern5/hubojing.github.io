@@ -57,7 +57,7 @@
         
         <tag>Linux</tag>
          
-        <tag>C语言</tag>
+        <tag>C</tag>
          
          
            
@@ -377,9 +377,9 @@
         <title>栈</title>
         <pubTime>2017-11-14T14:50:51.000Z</pubTime>
         
-        <tag>c++</tag>
-         
         <tag>数据结构</tag>
+         
+        <tag>c++</tag>
          
          
            
@@ -457,18 +457,18 @@
     
   <url>
     <loc>https://hubojing.github.io/2016/12/26/linux%E6%95%B4%E7%90%86%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-12-10T15:05:56.210Z</lastmod>
+    <lastmod>2017-12-10T15:05:56.000Z</lastmod>
     <data>
         <display>
         <title>一天一点linux</title>
         <pubTime>2016-12-26T15:31:29.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>Linux</tag>
          
          
            
              
-              <breadCrumb title="通信工程" url="https://hubojing.github.io/categories/%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B/"/>
+              <breadCrumb title="互联网" url="https://hubojing.github.io/categories/%E4%BA%92%E8%81%94%E7%BD%91/"/>
           
         </display>
     </data>

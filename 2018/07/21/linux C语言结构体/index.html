@@ -253,6 +253,9 @@
             <div align="left"><br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532916110&di=4947d07d2456caefff7ea9ef09ce4c65&imgtype=jpg&er=1&src=http%3A%2F%2Fimg2.mukewang.com%2F5567d48300010ba306000338.jpg" width="300" height="180" style="float:right;"><br><br><br>　　<strong>再学C语言，复习&amp;笔记。</strong><br><br><br> </div>
 
 <a id="more"></a>
+<p>系列顺序：<br><a href="https://hubojing.github.io/2018/07/17/Linux%20C%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E8%B7%B5/">Linux C语言编程基本原理与实践</a><br><a href="https://hubojing.github.io/2018/07/20/Linux%20C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E4%B8%8E%E5%86%85%E5%AD%98/">Linux C语言指针与内存</a><br><a href="https://hubojing.github.io/2018/07/21/linux%20C%E8%AF%AD%E8%A8%80%E7%BB%93%E6%9E%84%E4%BD%93/">Linux C语言结构体</a></p>
+<p>更多Linux知识：<br><a href="https://hubojing.github.io/2016/12/26/linux%E6%95%B4%E7%90%86%E7%AC%94%E8%AE%B0/">一天一点linux</a></p>
+<hr>
 <h1 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h1><p>编译的四个步骤：.c文件—&gt;.i文件（预处理）-&gt;.s文件（编译）-&gt;.o文件（汇编）-&gt;可执行文件（链接）</p>
 <p>gcc -o helloWorld.i helloWorld.c -E<br>-E表示只让helloWorld.c进行预处理</p>
 <h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><p>结构体对象所占的空间大小涉及到一个字节对齐的问题。字节对齐的目的是让计算机快速读写，是一个以空间换取时间的方式。<br>结构体对象的大小 = 最后一个成员的偏移量 + 最后一个成员变量的大小 + 填充字节<br>结构体字节对齐准则：当前成员的偏移量必须是成员变量大小的整数倍，不是的话在后面填充字节。<br>最后还要判断结构体大小是不是成员中最大成员类型的整数倍，不是的话还需填充。</p>
