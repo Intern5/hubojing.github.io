@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://hubojing.github.io/2019/01/11/django%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2019-01-13T13:49:37.307Z</lastmod>
+    <data>
+        <display>
+        <title>Django博客demo</title>
+        <pubTime>2019-01-11T10:19:51.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Django</tag>
+         
+         
+           
+             
+              <breadCrumb title="互联网" url="https://hubojing.github.io/categories/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://hubojing.github.io/2019/01/01/%E6%96%B0%E5%B9%B4Flag/</loc>
     <lastmod>2019-01-06T10:05:28.615Z</lastmod>
     <data>
@@ -397,9 +419,9 @@
         <title>栈</title>
         <pubTime>2017-11-14T14:50:51.000Z</pubTime>
         
-        <tag>数据结构</tag>
-         
         <tag>c++</tag>
+         
+        <tag>数据结构</tag>
          
          
            
