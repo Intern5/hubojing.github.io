@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>https://hubojing.github.io/2019/01/11/django%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2019-01-13T13:49:37.307Z</lastmod>
@@ -174,7 +175,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://hubojing.github.io/2018/05/21/bmp%E4%BF%9D%E5%AD%98%E5%92%8Cimagelist%E8%AF%BB%E5%8F%96/</loc>
@@ -353,9 +353,9 @@
         <title>联想Y400拆机</title>
         <pubTime>2018-02-20T07:48:29.000Z</pubTime>
         
-        <tag>硬件</tag>
-         
         <tag>拆机</tag>
+         
+        <tag>硬件</tag>
          
          
            
@@ -481,9 +481,9 @@
         <title>组装PC</title>
         <pubTime>2017-09-17T15:52:22.000Z</pubTime>
         
-        <tag>装机</tag>
-         
         <tag>硬件</tag>
+         
+        <tag>装机</tag>
          
         <tag>数码</tag>
          

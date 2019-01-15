@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hubojing.github.io/comment/index.html</loc>
+    
+    <lastmod>2019-01-15T14:09:15.461Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hubojing.github.io/2019/01/11/django%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2019-01-13T13:49:37.307Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>https://hubojing.github.io/2018/05/26/%E8%AF%BB%E5%8F%9624%E4%BD%8Dbmp%E5%83%8F%E7%B4%A0%E6%95%B0%E6%8D%AE%EF%BC%88%E5%B8%A6%E9%80%8F%E6%98%8E%E9%80%9A%E9%81%93%EF%BC%89/</loc>
     
     <lastmod>2018-05-28T11:34:05.792Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hubojing.github.io/comment/index.html</loc>
-    
-    <lastmod>2018-05-27T05:38:59.031Z</lastmod>
     
   </url>
   
@@ -527,14 +527,14 @@
   </url>
   
   <url>
-    <loc>https://hubojing.github.io/public/en/tags/index.html</loc>
+    <loc>https://hubojing.github.io/public/en/about/index.html</loc>
     
     <lastmod>2016-08-06T09:18:26.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hubojing.github.io/public/en/about/index.html</loc>
+    <loc>https://hubojing.github.io/public/en/tags/index.html</loc>
     
     <lastmod>2016-08-06T09:18:26.000Z</lastmod>
     
